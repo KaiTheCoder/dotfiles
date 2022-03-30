@@ -15,10 +15,10 @@
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 	
 	Plug 'kyazdani42/nvim-web-devicons'
-	Plug 'romgrk/barbar.nvim'
 	Plug 'kyazdani42/nvim-tree.lua'
 	Plug 'nvim-lualine/lualine.nvim'
     Plug 'andweeb/presence.nvim'
+    Plug 'akinsho/bufferline.nvim'
 
 	Plug 'preservim/nerdcommenter'
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -37,22 +37,27 @@
 
 	Plug 'catppuccin/nvim'
     Plug 'ellisonleao/gruvbox.nvim'
+    Plug 'sainnhe/gruvbox-material'
+    Plug 'junegunn/seoul256.vim'
+
+    Plug 'norcalli/nvim-colorizer.lua'
 call plug#end()
 
 lua <<EOF
+    
+--    require'colorizer'.setup()
 
+    require('bufferline').setup{}
     require('telescope').load_extension('fzf')
 
     require('nvim-treesitter.configs').setup{
         highlight = {enable=true}
     }
 
-    
-
     require('lualine').setup {
         options = {
             icons_enabled = true,
-            theme = 'gruvbox',
+            theme = 'gruvbox-material',
             component_seperators = {},
             section_seperators = {},
             disabled_filetypes = {},
@@ -144,9 +149,6 @@ require'nvim-tree'.setup {
     require_confirm = true
   }
 }
-EOF
-
-lua << EOF
 	require('nvim-autopairs').setup{}
 
 	local cmp_autopairs = require('nvim-autopairs.completion.cmp')
@@ -183,7 +185,9 @@ lua << EOF
 
 	require('lspconfig')['sumneko_lua'].setup{
 		capabilities = capabilities
-	}
+	} 
+
+    require('lspconfig').clangd.setup{}
 
     require("catppuccin").setup({
         integrations={
@@ -193,12 +197,18 @@ lua << EOF
 	
 EOF
 
+if !has('gui_running') && &term =~ '^\%(screen\|tmux\)'
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+
+syntax on
 set termguicolors
-set background=dark
-colorscheme gruvbox
+"let g:seoul256_background = 234
+"colorscheme seoul256
+colorscheme gruvbox-material
 
 filetype plugin indent on 
-syntax on
 
 set t_Co=256
 
