@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Created by newuser for 5.8
 
 autoload -Uz vcs_info
@@ -24,8 +31,9 @@ alias remove="sudo pacman -Rs"
 alias update="sudo pacman -Syu"
 alias py="python3"
 alias config='git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME'
-alias tmuxs="tmux new -s"
-alias tmuxt="tmux attach -t"
+alias tmuxs="tmux -u new -s"
+alias tmuxt="tmux -u attach -t"
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
-export LC_ALL=en_IN.UTF-8
-export LANG=en_IN.UTF-8
+# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
