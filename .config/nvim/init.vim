@@ -39,6 +39,7 @@
     Plug 'ellisonleao/gruvbox.nvim'
     Plug 'sainnhe/gruvbox-material'
     Plug 'junegunn/seoul256.vim'
+    Plug 'https://github.com/sainnhe/everforest'
 
     Plug 'norcalli/nvim-colorizer.lua'
 call plug#end()
@@ -57,7 +58,7 @@ lua <<EOF
     require('lualine').setup {
         options = {
             icons_enabled = true,
-            theme = 'gruvbox-material',
+            theme = 'auto',
             component_seperators = {},
             section_seperators = {},
             disabled_filetypes = {},
@@ -204,8 +205,7 @@ endif
 
 syntax on
 set termguicolors
-"let g:seoul256_background = 234
-"colorscheme seoul256
+let g:gruvbox_material_background = 'hard'
 colorscheme gruvbox-material
 
 filetype plugin indent on 
