@@ -82,6 +82,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray
 static const char *termcmd[]  = { "wezterm", NULL };
 
 static const Key keys[] = {
+    {MODKEY|ShiftMask, XK_Print, spawn, SHCMD("flameshot gui") },
     {MODKEY, XK_Print, spawn, SHCMD("flameshot full -c")},
     {0, XF86XK_AudioLowerVolume, spawn, SHCMD("pamixer --decrease 5 && pkill -RTMIN+22 dwmblocks")  },
     {0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pamixer --increase 5 && pkill -RTMIN+22 dwmblocks")},
