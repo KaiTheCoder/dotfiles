@@ -84,8 +84,8 @@ static const char *termcmd[]  = { "wezterm", NULL };
 static const Key keys[] = {
     {MODKEY|ShiftMask, XK_Print, spawn, SHCMD("flameshot gui") },
     {MODKEY, XK_Print, spawn, SHCMD("flameshot full -c")},
-    {0, XF86XK_AudioLowerVolume, spawn, SHCMD("pamixer --decrease 5 && pkill -RTMIN+22 dwmblocks")  },
-    {0, XF86XK_AudioRaiseVolume, spawn, SHCMD("pamixer --increase 5 && pkill -RTMIN+22 dwmblocks")},
+    {MODKEY, XK_F11, spawn, SHCMD("pamixer --decrease 5 && pkill -RTMIN+22 dwmblocks")  },
+    {MODKEY, XK_F12, spawn, SHCMD("pamixer --increase 5 && pkill -RTMIN+22 dwmblocks")},
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
