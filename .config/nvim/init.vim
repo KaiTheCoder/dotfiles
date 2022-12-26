@@ -45,6 +45,7 @@
     Plug 'norcalli/nvim-colorizer.lua'
     Plug 'vimlab/split-term.vim'
     Plug 'simrat39/rust-tools.nvim'
+    Plug 'smjonas/inc-rename.nvim'
 call plug#end()
 
 set termguicolors
@@ -59,8 +60,12 @@ endif
 syntax on
 set t_Co=256
 "let g:sonokai_style= 'shusia'
-let g:sonokai_style= 'espresso'
-colorscheme sonokai
+"let g:sonokai_style= 'espresso'
+"colorscheme sonokai
+let g:everforest_background = 'hard'
+let g:everforest_better_performance = 1
+colorscheme everforest
+
 
 filetype plugin indent on 
 
@@ -121,3 +126,9 @@ map sl <C-w>l
 " Switch tab
 nmap <S-Tab> :tabprev<Return>
 nmap <Tab> :tabnext<Return>
+
+" For local replace
+nnoremap gr gd [{V%::s/<C-R>///gc<left><left><left> 
+
+" For global replace 
+nnore map gR gD:%s/<C-R>///gc<left><left><left>

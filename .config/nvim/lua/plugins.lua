@@ -1,3 +1,4 @@
+require('inc_rename').setup()
 require('colorizer').setup()
 require('bufferline').setup()
 require('telescope').load_extension('fzf')
@@ -10,8 +11,10 @@ require('lualine').setup()
 require'nvim-tree'.setup()
 require ('nvim-autopairs').setup{}
 
-local cmp = require('cmp')
+local rt = require('rust-tools')
+rt.setup()
 
+local cmp = require('cmp')
 -- making sure that the autocomplete uses the vsnip engine
 cmp.setup({
     snippet = {
