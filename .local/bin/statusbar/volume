@@ -15,4 +15,4 @@ else
 	icon=" "
 fi
 
-echo -e "$icon$vol%"
+echo -e "[ $icon$vol% ]"

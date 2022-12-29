@@ -41,6 +41,8 @@
     Plug 'sainnhe/sonokai'
     Plug 'junegunn/seoul256.vim'
     Plug 'https://github.com/sainnhe/everforest'
+    Plug 'rose-pine/neovim'
+    Plug 'kvrohit/mellow.nvim'
 
     Plug 'norcalli/nvim-colorizer.lua'
     Plug 'vimlab/split-term.vim'
@@ -49,6 +51,12 @@
 call plug#end()
 
 set termguicolors
+
+if exists("g:neovide")
+    set guifont=Hack\ 
+    let g:neovide_refresh_rate = 144
+    let g:neovide_cursor_trail_size = 0
+endif
 
 :luafile ~/.config/nvim/lua/plugins.lua
 
@@ -59,13 +67,15 @@ endif
 
 syntax on
 set t_Co=256
-"let g:sonokai_style= 'shusia'
+let g:sonokai_style= 'shusia'
 "let g:sonokai_style= 'espresso'
-"colorscheme sonokai
-let g:everforest_background = 'hard'
-let g:everforest_better_performance = 1
-colorscheme everforest
-
+colorscheme sonokai
+"let g:everforest_background = 'hard'
+"let g:everforest_better_performance = 1
+"colorscheme everforest
+"colorscheme rose-pine
+"let g:mellow_italic_functions = 0 
+"colorscheme mellow
 
 filetype plugin indent on 
 

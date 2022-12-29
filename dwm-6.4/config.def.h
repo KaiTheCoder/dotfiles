@@ -23,7 +23,9 @@ static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
-static const char col_orange[] = "#fc9867";
+static const char col_cyan2[] = "#94B49F";
+static const char col_orange[] = "#DF7861";
+static const char col_lightorange[] = "#ECB390";
 static const char col_green[] = "#0F3D3E";
 static const char col_beige[] = "#E2DCC8";
 static const char col_black[] = "#100F0F";
@@ -31,15 +33,15 @@ static const char col_darkblue[] = "#395B64";
 static const char col_lightblue[] = "#A5C9CA";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_lightblue},
-    [SchemeSel] = {col_gray1, col_lightblue, col_lightblue},
-    [SchemeOccSel] = {col_gray1, col_lightblue, col_lightblue},
-    [SchemeOccNorm] = {col_gray4, col_darkblue, col_lightblue},
+	[SchemeNorm] = { col_gray3, col_gray1, col_cyan2},
+    [SchemeSel] = {col_gray1, col_lightorange, col_cyan2},
+    [SchemeOccSel] = {col_gray1, col_lightorange, col_cyan2},
+    [SchemeOccNorm] = {col_gray1, col_orange, col_cyan2},
 };
 
 /* tagging */
 
-static const char *tags[] = { "  ", " ﭮ  ", "  ", "  ", "  "};
+static const char *tags[] = { "  ", " ﭮ  ", "  ", "  " ,"  ", "  "};
 
 static const Rule rules[] = {
 	/* xprop(1):

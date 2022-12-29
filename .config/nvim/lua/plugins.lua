@@ -47,6 +47,10 @@ lspconfig['sumneko_lua'].setup{
     capabilities = capabilities
 }
 
+lspconfig.pyright.setup {
+    capabilities = capabilities
+}
+
 lspconfig.clangd.setup{
     capabilities = capabilities
 }
