@@ -31,17 +31,23 @@ static const char col_beige[] = "#E2DCC8";
 static const char col_black[] = "#100F0F";
 static const char col_darkblue[] = "#395B64";
 static const char col_lightblue[] = "#A5C9CA";
+
+// Red Berry Color Scheme
+static const char col_berry_light[] = "#701f28";
+static const char col_berry_dark[] = "#381014";
+
+
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_cyan2},
-    [SchemeSel] = {col_gray1, col_lightorange, col_cyan2},
-    [SchemeOccSel] = {col_gray1, col_lightorange, col_cyan2},
-    [SchemeOccNorm] = {col_gray1, col_orange, col_cyan2},
+	[SchemeNorm] = { col_gray3, col_black, col_berry_light},
+    [SchemeSel] = {col_gray4, col_berry_light, col_berry_light},
+    [SchemeOccSel] = {col_gray4, col_berry_light, col_berry_light},
+    [SchemeOccNorm] = {col_gray4, col_berry_dark, col_berry_light},
 };
 
 /* tagging */
 
-static const char *tags[] = { "  ", " ﭮ  ", "  ", "  " ,"  ", "  "};
+static const char *tags[] = { "  ", "  ", "   " , "  " , "   "};
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -67,7 +73,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \

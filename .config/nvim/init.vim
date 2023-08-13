@@ -1,10 +1,6 @@
 :call plug#begin('~/.config/local/share/nvim/site/autoload')
 
-	Plug 'nvim-treesitter/nvim-treesitter'
-	Plug 'hrsh7th/nvim-compe'
-
 	Plug 'kabouzeid/nvim-lspinstall'
-	Plug 'NightrainsRbx/RobloxLsp'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'sumneko/lua-language-server'
 	
@@ -28,24 +24,17 @@
 	Plug 'hrsh7th/nvim-cmp'
 	Plug 'hrsh7th/cmp-vsnip'
 	Plug 'hrsh7th/vim-vsnip'
+    Plug 'hrsh7th/cmp-buffer'
+    Plug 'hrsh7th/cmp-path'
+    Plug 'hrsh7th/cmp-cmdline'
 	
 	Plug 'rafamadriz/friendly-snippets'
 	Plug 'windwp/nvim-autopairs'
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim'
-    Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 
-	Plug 'catppuccin/nvim'
-    Plug 'ellisonleao/gruvbox.nvim'
-    Plug 'sainnhe/gruvbox-material'
     Plug 'sainnhe/sonokai'
-    Plug 'junegunn/seoul256.vim'
-    Plug 'https://github.com/sainnhe/everforest'
-    Plug 'rose-pine/neovim'
-    Plug 'kvrohit/mellow.nvim'
+    Plug 'sainnhe/everforest'
 
     Plug 'norcalli/nvim-colorizer.lua'
-    Plug 'vimlab/split-term.vim'
     Plug 'simrat39/rust-tools.nvim'
     Plug 'smjonas/inc-rename.nvim'
 call plug#end()
@@ -67,12 +56,12 @@ endif
 
 syntax on
 set t_Co=256
-let g:sonokai_style= 'shusia'
+"let g:sonokai_style= 'shusia'
 "let g:sonokai_style= 'espresso'
-colorscheme sonokai
-"let g:everforest_background = 'hard'
-"let g:everforest_better_performance = 1
-"colorscheme everforest
+"colorscheme sonokai
+let g:everforest_background = 'hard'
+let g:everforest_better_performance = 1
+colorscheme everforest
 "colorscheme rose-pine
 "let g:mellow_italic_functions = 0 
 "colorscheme mellow
