@@ -98,22 +98,22 @@ float alpha = 0.8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-  "#262626", /* base00 */
+  "#0b0304", /* base00 */
   "#d75f5f", /* base08 */
-  "#afaf00", /* base0B */
+  "#701f28", /* base0B */
   "#ffaf00", /* base0A */
-  "#83adad", /* base0D */
+  "#ede4cf", /* base0D */
   "#d485ad", /* base0E */
   "#85ad85", /* base0C */
-  "#dab997", /* base05 */
+  "#ede4cf", /* base05 */
   "#8a8a8a", /* base03 */
-  "#ff8700", /* base09 */
-  "#3a3a3a", /* base01 */
+  "#1f7067", /* base09 */
+  "#0b0304", /* base01 */
   "#4e4e4e", /* base02 */
   "#949494", /* base04 */
   "#d5c4a1", /* base06 */
-  "#d65d0e", /* base0F */
-  "#ebdbb2", /* base07 */
+  "#1f7067", /* base0F */
+  "#ede4cf", /* base07 */
 };
 
 unsigned int defaultfg = 7;

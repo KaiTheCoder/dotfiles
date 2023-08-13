@@ -68,11 +68,13 @@ packer.startup(function()
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
+  use 'brenoprata10/nvim-highlight-colors'
 
 	end
 )
 
 -- Make neovim prettier 
+require('nvim-highlight-colors').setup {}
 require('rose-pine').setup()
 vim.cmd('colorscheme rose-pine')
 
