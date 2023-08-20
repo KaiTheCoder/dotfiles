@@ -38,18 +38,24 @@ static const char col_berry_light[] = "#701f28";
 static const char col_berry_dark[] = "#381014";
 
 // catppuccin theme 
-static const char col_pucc_pink[] = "#f3bce6"; 
-static const char col_pucc_purple[] = "#c29df1";
-static const char col_pucc_blugray[] = "#24273a";
+static const char col_pucc_rosewater[] = "#f2d5cf";
+static const char col_pucc_pink[] = "#f4b8e4"; 
+static const char col_pucc_purple[] = "#ca9ee6";
+static const char col_pucc_red[] = "#e78284";
+static const char col_pucc_blugray[] = "#232634";
 static const char col_pucc_dgray[] = "#1a1823";
 static const char col_pucc_blugray2[] = "#131020";
+static const char col_pucc_bg[] = "#303446";
+static const char col_pucc_text[] = "#c6d0f5";
+static const char col_pucc_yellow[] = "#e5c890";
+static const char col_pucc_maroon[] = "#ea999c";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_white, col_pucc_dgray, col_pucc_purple},
+	[SchemeNorm] = {col_pucc_text, col_pucc_bg, col_pucc_pink},
     [SchemeSel] = {col_pucc_pink, col_pucc_blugray, col_pucc_purple},
     [SchemeOccSel] = {col_pucc_pink, col_pucc_blugray, col_pucc_purple},
-    [SchemeOccNorm] = {col_pucc_purple, col_pucc_dgray, col_pucc_purple},
+    [SchemeOccNorm] = {col_pucc_purple, col_pucc_bg, col_pucc_purple},
 };
 
 /* tagging */
