@@ -46,9 +46,9 @@ static const char col_pucc_blugray2[] = "#131020";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_pucc_dgray, col_pucc_purple},
-    [SchemeSel] = {col_gray4, col_pucc_blugray, col_pucc_purple},
-    [SchemeOccSel] = {col_gray4, col_pucc_blugray, col_pucc_purple},
-    [SchemeOccNorm] = {col_gray4, col_pucc_blugray2, col_pucc_purple},
+    [SchemeSel] = {col_pucc_purple, col_pucc_blugray, col_pucc_purple},
+    [SchemeOccSel] = {col_pucc_purple, col_pucc_blugray, col_pucc_purple},
+    [SchemeOccNorm] = {col_pucc_pink, col_pucc_blugray2, col_pucc_purple},
 };
 
 /* tagging */
