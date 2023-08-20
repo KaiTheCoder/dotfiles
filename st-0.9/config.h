@@ -16,7 +16,7 @@ static int borderpx = 2;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/zsh";
+static char *shell = "/bin/sh";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = NULL;
@@ -98,28 +98,40 @@ float alpha = 0.8;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-  "#0b0304", /* base00 */
-  "#d75f5f", /* base08 */
-  "#701f28", /* base0B */
-  "#ffaf00", /* base0A */
-  "#ede4cf", /* base0D */
-  "#d485ad", /* base0E */
-  "#85ad85", /* base0C */
-  "#ede4cf", /* base05 */
-  "#8a8a8a", /* base03 */
-  "#1f7067", /* base09 */
-  "#0b0304", /* base01 */
-  "#4e4e4e", /* base02 */
-  "#949494", /* base04 */
-  "#d5c4a1", /* base06 */
-  "#1f7067", /* base0F */
-  "#ede4cf", /* base07 */
+	/* 8 normal colors */
+	"#51576D",
+	"#E78284",
+	"#A6D189",
+	"#E5C890",
+	"#8CAAEE",
+	"#F4B8E4",
+	"#81C8BE",
+	"#B5BFE2",
+
+	/* 8 bright colors */
+	"#626880",
+	"#E78284",
+	"#A6D189",
+	"#E5C890",
+	"#8CAAEE",
+	"#F4B8E4",
+	"#81C8BE",
+	"#A5ADCE",
+
+[256] = "#C6D0F5", /* default foreground colour */
+[257] = "#000000", /* default background colour */
+[258] = "#F2D5CF", /*575268*/
+
 };
 
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 0;
-unsigned int defaultcs = 13;
-unsigned int defaultrcs = 0;
+/*
+ * foreground, background, cursor, reverse cursor
+ */
+unsigned int defaultfg = 256;
+unsigned int defaultbg = 257;
+unsigned int defaultcs = 258;
+static unsigned int defaultrcs = 258;
+
 /*
  * Default shape of cursor
  * 2: Block ("█")
