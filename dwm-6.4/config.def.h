@@ -10,7 +10,7 @@
 //static const char *downvol[] = {"pamixer", "--decrease", "5", NULL};
 //static const char *mutevol[] = {"pamixer", "-t", NULL};
 
-static const unsigned int borderpx  = 3;        /* border pixel of windows */
+static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
