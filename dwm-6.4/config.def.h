@@ -31,6 +31,7 @@ static const char col_beige[] = "#E2DCC8";
 static const char col_black[] = "#100F0F";
 static const char col_darkblue[] = "#395B64";
 static const char col_lightblue[] = "#A5C9CA";
+static const char col_white[] = "#ffffff";
 
 // Red Berry Color Scheme
 static const char col_berry_light[] = "#701f28";
@@ -45,10 +46,10 @@ static const char col_pucc_blugray2[] = "#131020";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_pucc_dgray, col_pucc_purple},
+	[SchemeNorm] = { col_white, col_pucc_dgray, col_pucc_purple},
     [SchemeSel] = {col_pucc_pink, col_pucc_blugray, col_pucc_purple},
     [SchemeOccSel] = {col_pucc_pink, col_pucc_blugray, col_pucc_purple},
-    [SchemeOccNorm] = {col_pucc_purple, col_pucc_blugray2, col_pucc_purple},
+    [SchemeOccNorm] = {col_pucc_purple, col_pucc_dgray, col_pucc_purple},
 };
 
 /* tagging */
