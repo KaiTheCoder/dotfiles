@@ -89,13 +89,7 @@ require('lualine').setup()
 --Setup catppuccin 
 require('catppuccin').setup{
   flavour="frappe",
-  color_overrides= {
-    frappe = {
-      base="#000000",
-      mantle="#000000",
-      crust="#000000",
-    },
-  },
+  background={dark="frappe"},
 }
 
 vim.cmd.colorscheme "catppuccin"
