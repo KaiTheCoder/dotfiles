@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  Alduin = {
+    loaded = true,
+    path = "/home/kaisar/.local/share/nvim/site/pack/packer/start/Alduin",
+    url = "https://github.com/AlessandroYorba/Alduin"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/kaisar/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -138,11 +143,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/kaisar/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
-  },
-  ["rose-pine"] = {
-    loaded = true,
-    path = "/home/kaisar/.local/share/nvim/site/pack/packer/start/rose-pine",
-    url = "https://github.com/rose-pine/neovim"
   },
   ["vim-polyglot"] = {
     loaded = true,

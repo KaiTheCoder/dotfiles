@@ -39,11 +39,17 @@ packer.startup(function()
 	use 'sheerun/vim-polyglot'
 
 	-- Color scheme
-	use({'rose-pine/neovim', as = 'rose-pine'})
+  --use {
+    --"phha/zenburn.nvim",
+    --config = function() require("zenburn").setup() end
+  --}
+  --use 'AlessandroYorba/Alduin'
+  --use ({ 'projekt0n/github-nvim-theme' })
+  use { "catppuccin/nvim", as = "catppuccin" }
 
 	-- LSP
 	use 'neovim/nvim-lspconfig'
-	use 'anott03/nvim-lspinstall'
+  use 'williamboman/mason.nvim'
 
 	-- Autocompletion
   use 'hrsh7th/cmp-nvim-lsp'
@@ -74,11 +80,26 @@ packer.startup(function()
 )
 
 -- Make neovim prettier 
+vim.cmd("set number")
 require('nvim-highlight-colors').setup {}
-require('rose-pine').setup()
-vim.cmd('colorscheme rose-pine')
-
 require('lualine').setup()
+--vim.cmd('colorscheme github_dark_dimmed')
+
+
+--Setup catppuccin 
+require('catppuccin').setup{
+  flavour="frappe",
+  color_overrides= {
+    frappe = {
+      base="#000000",
+      mantle="#000000",
+      crust="#000000",
+    },
+  },
+}
+
+vim.cmd.colorscheme "catppuccin"
+
 
 -- Setting up syntax highlighting with treesitter
 require'nvim-treesitter.configs'.setup({
@@ -150,6 +171,7 @@ cmp.setup.cmdline(':', {
 })
 
 -- Set up lspconfig.
+require("mason").setup()
 local lspconfig = require'lspconfig'
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 

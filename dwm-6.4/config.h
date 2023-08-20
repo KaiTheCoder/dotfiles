@@ -15,7 +15,7 @@ static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int user_bh = 10; 
+static const int user_bh = 5; 
 static const char *fonts[]          = { "monospace:size=15", "Hurmit Nerd Font:style=Medium:size=16" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#222222";
@@ -36,13 +36,19 @@ static const char col_lightblue[] = "#A5C9CA";
 static const char col_berry_light[] = "#701f28";
 static const char col_berry_dark[] = "#381014";
 
+// catppuccin theme 
+static const char col_pucc_pink[] = "#f3bce6"; 
+static const char col_pucc_purple[] = "#c29df1";
+static const char col_pucc_blugray[] = "#24273a";
+static const char col_pucc_dgray[] = "#1a1823";
+static const char col_pucc_blugray2[] = "#131020";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_black, col_berry_light},
-    [SchemeSel] = {col_gray4, col_berry_light, col_berry_light},
-    [SchemeOccSel] = {col_gray4, col_berry_light, col_berry_light},
-    [SchemeOccNorm] = {col_gray4, col_berry_dark, col_berry_light},
+	[SchemeNorm] = { col_gray3, col_black, col_pucc_purple},
+    [SchemeSel] = {col_gray4, col_pucc_purple, col_pucc_purple},
+    [SchemeOccSel] = {col_gray4, col_pucc_purple, col_pucc_purple},
+    [SchemeOccNorm] = {col_gray4, col_pucc_blugray, col_pucc_purple},
 };
 
 /* tagging */
