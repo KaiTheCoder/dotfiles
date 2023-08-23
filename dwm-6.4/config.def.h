@@ -49,18 +49,21 @@ static const char col_pucc_bg[] = "#303446";
 static const char col_pucc_text[] = "#c6d0f5";
 static const char col_pucc_yellow[] = "#e5c890";
 static const char col_pucc_maroon[] = "#ea999c";
+static const char col_pucc_green[] = "#a6d189";
+static const char col_pucc_flamingo[] = "#eebebe";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = {col_pucc_text, col_pucc_bg, col_pucc_pink},
-    [SchemeSel] = {col_pucc_pink, col_pucc_blugray, col_pucc_purple},
-    [SchemeOccSel] = {col_pucc_pink, col_pucc_blugray, col_pucc_purple},
-    [SchemeOccNorm] = {col_pucc_purple, col_pucc_bg, col_pucc_purple},
+    [SchemeSel] = {col_pucc_text, col_pucc_blugray, col_pucc_purple},
+    [SchemeOccSel] = {col_pucc_text, col_pucc_blugray, col_pucc_purple},
+    [SchemeOccNorm] = {col_pucc_green, col_pucc_bg, col_pucc_purple},
 };
 
 /* tagging */
 
-static const char *tags[] = { "  ", "  ", "   " , "  " , "   "};
+//static const char *tags[] = { "  ", "  ", "   " , "  " , "   "};
+static const char *tags[] = {"  web  ", "  vim  ", "  hack  ", "  misc  "};
 
 static const Rule rules[] = {
 	/* xprop(1):
