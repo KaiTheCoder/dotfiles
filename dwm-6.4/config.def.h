@@ -69,7 +69,7 @@ static const char *colors[][3]      = {
 /* tagging */
 
 //static const char *tags[] = { "  ", "  ", "   " , "  " , "   "};
-static const char *tags[] = {"  web  ", "  vim  ", "  hack  ", "  misc  "};
+static const char *tags[] = {"  firefox  ", "  code  ", "  hack  ", "  misc  "};
 
 static const Rule rules[] = {
 	/* xprop(1):
