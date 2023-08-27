@@ -25,8 +25,7 @@ packer.init({
 
 packer.startup(function()
 	local use = use
-	-- plugins go here
-	
+
 	-- Syntax highlighting
 	  use {
     	'nvim-treesitter/nvim-treesitter',
@@ -39,13 +38,9 @@ packer.startup(function()
 	use 'sheerun/vim-polyglot'
 
 	-- Color scheme
-  --use {
-    --"phha/zenburn.nvim",
-    --config = function() require("zenburn").setup() end
-  --}
-  --use 'AlessandroYorba/Alduin'
   --use ({ 'projekt0n/github-nvim-theme' })
-  use { "catppuccin/nvim", as = "catppuccin" }
+  --use { "catppuccin/nvim", as = "catppuccin" }
+  use({ 'rose-pine/neovim', as = 'rose-pine' })
 
 	-- LSP
 	use 'neovim/nvim-lspconfig'
@@ -59,6 +54,10 @@ packer.startup(function()
 	use 'hrsh7th/nvim-cmp'	
 	use 'hrsh7th/cmp-vsnip'
 	use 'hrsh7th/vim-vsnip'
+  use {
+    "windwp/nvim-autopairs",
+    config = function() require('nvim-autopairs').setup{} end
+  }
 
   -- File explorer
   use {
@@ -84,15 +83,19 @@ vim.cmd("set number")
 require('nvim-highlight-colors').setup {}
 require('lualine').setup()
 --vim.cmd('colorscheme github_dark_dimmed')
-
+vim.cmd('colorscheme rose-pine')
 
 --Setup catppuccin 
-require('catppuccin').setup{
-  flavour="frappe",
-  background={dark="frappe"},
-}
+--require('catppuccin').setup{
+--  flavour="frappe",
+--  background={dark="frappe"},
+--}
 
-vim.cmd.colorscheme "catppuccin"
+--vim.cmd.colorscheme "catppuccin"
+
+-- Transparent background
+vim.api.nvim_set_hl(0, "Normal", {bg="none"})
+vim.api.nvim_set_hl(0, "NormalFloat", {bg="none"})
 
 
 -- Setting up syntax highlighting with treesitter
