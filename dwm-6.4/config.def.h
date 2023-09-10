@@ -15,8 +15,8 @@ static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int user_bh = 5; 
-static const char *fonts[]          = { "monospace:size=13", "Hurmit Nerd Font:style=Medium:size=16" };
+static const int user_bh = 7; 
+static const char *fonts[]          = { "monospace:size=14", "Hurmit Nerd Font:style=Medium:size=16" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
@@ -56,7 +56,7 @@ static const char col_pucc_flamingo[] = "#eebebe";
 static const char col_pine_sel[] = "#191724";
 static const char col_pine_bg[] = "#1f1d2e";
 static const char col_pine_occ[] = "#ebbcba";
-static const char col_pine_text[] = "#e0def4";
+static const char col_pine_text[] = "#eb6f92";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -68,8 +68,8 @@ static const char *colors[][3]      = {
 
 /* tagging */
 
-//static const char *tags[] = { "  ", "  ", "   " , "  " , "   "};
-static const char *tags[] = {"  firefox  ", "  terminal  ", "  vpn  ", "  misc  "};
+static const char *tags[] = { "         ", "        ", "         " , "         "};
+//static const char *tags[] = {"  firefox  ", "  terminal  ", "  vpn  ", "  misc  "};
 
 static const Rule rules[] = {
 	/* xprop(1):

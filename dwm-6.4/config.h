@@ -11,12 +11,12 @@
 //static const char *mutevol[] = {"pamixer", "-t", NULL};
 
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int gappx     = 5;        /* gaps between windows */
+static const unsigned int gappx     = 9;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int user_bh = 5; 
-static const char *fonts[]          = { "monospace:size=13", "Hurmit Nerd Font:style=Medium:size=16" };
+static const int user_bh = 7; 
+static const char *fonts[]          = { "monospace:size=14", "Hurmit Nerd Font:style=Medium:size=16" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
@@ -53,23 +53,24 @@ static const char col_pucc_green[] = "#a6d189";
 static const char col_pucc_flamingo[] = "#eebebe";
 
 // rose-pine theme
-static const char col_pine_sel[] = "#191724";
-static const char col_pine_bg[] = "#1f1d2e";
-static const char col_pine_occ[] = "#ebbcba";
+static const char col_pine_sel[] = "#21202e";
+static const char col_pine_bg[] = "#191724";
+static const char col_pine_seltext[] = "#c4a7e7";
+static const char col_pine_occ[] = "#31748f";
 static const char col_pine_text[] = "#e0def4";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = {col_pine_text, col_pine_bg, col_pine_occ},
-    [SchemeSel] = {col_pine_text, col_pine_sel, col_pine_occ},
-    [SchemeOccSel] = {col_pine_text, col_pine_sel, col_pine_occ},
+    [SchemeSel] = {col_pine_seltext, col_pine_sel, col_pine_occ},
+    [SchemeOccSel] = {col_pine_seltext, col_pine_sel, col_pine_occ},
     [SchemeOccNorm] = {col_pine_occ, col_pine_bg, col_pine_occ},
 };
 
 /* tagging */
 
-//static const char *tags[] = { "  ", "  ", "   " , "  " , "   "};
-static const char *tags[] = {"  firefox  ", "  terminal  ", "  vpn  ", "  misc  "};
+static const char *tags[] = { "         ", "         ", "         " , "         "};
+//static const char *tags[] = {"  firefox  ", "  terminal  ", "  vpn  ", "  misc  "};
 
 static const Rule rules[] = {
 	/* xprop(1):
